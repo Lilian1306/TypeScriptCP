@@ -18,7 +18,7 @@ jobs:
 
             # Set up Node.js enviroments with Yarn
             - name: Set up Node.js
-              uses: actions/setup-bide@v4
+              uses: actions/setup-node@v4
               with: 
                 node-version: "18" # Specify Node.js version
                 cache: "npm"
