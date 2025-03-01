@@ -1,8 +1,8 @@
+import MenuItem from "./components/MenuItem"
 import { menuItems } from "./data/db"
 
 function App() {
 
-  console.log(menuItems)
   return (
     <>
       <header className="bg-teal-400 py-5">
@@ -13,7 +13,11 @@ function App() {
         <div>
 
            <h2>Menu</h2>
-
+         {menuItems.map(item =>(
+           <MenuItem
+             key={item.id}
+           />
+         ))}
         </div>
 
         <div>
