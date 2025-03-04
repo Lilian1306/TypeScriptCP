@@ -7,6 +7,8 @@ export default function useOrder() {
 
     const [order, setOrder] = useState<OrderItem[]>([])
 
+
+    // Codigo para agregar productos y tambien para evitar duplicados del mismo producto. 
     const addItem = (item: MenuItem) => {
       const itemExist = order.find(orderItem => orderItem.id === item.id)
       if(itemExist) {
@@ -20,10 +22,9 @@ export default function useOrder() {
         setOrder([...order, newItem])
       }
     }
-
-    console.log(order)
     
   return {
+    order,
     addItem
   }
    
