@@ -5,8 +5,8 @@ import type { MenuItem, OrderItem } from "../types"
 
 export default function useOrder() {
 
-    const [order, setOrder] = useState<OrderItem[]>([])
-
+    const [order, setOrder] = useState<OrderItem[]>([])  // Creando la funcion order y setOrder, donde vamos almacenar los productos agregados en la orden y setOrder nos permite modificar esa lista de productsto. 
+    const [tip, setTip] = useState(0)  // Creando una funcion para las propinas
 
     // Codigo para agregar productos y para evitar duplicados del mismo producto. 
     const addItem = (item: MenuItem) => {
@@ -29,6 +29,8 @@ export default function useOrder() {
     }
   return {
     order,
+    tip,
+    setTip,
     addItem,
     removeItem
   }
